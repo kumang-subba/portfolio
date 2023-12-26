@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio: Made using Next.js, Tailwind CSS and Framer-motion
 
-## Getting Started
+Check out the portfolio [here](https://kumang-subba.vercel.app/)
 
-First, run the development server:
+### Preview of the Website:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Preview 1](/site-images/site-1.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Preview 2](/site-images/site-2.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+### Tech used in this Project
 
-To learn more about Next.js, take a look at the following resources:
+- <img src="./site-images/html.svg"  height="20px"/> HTML
+- <img src="./site-images/ts.svg" height="20px"/> TypeScript
+- <img src="./site-images/react.svg" height="20px"/> React
+- <img src="./site-images/next.svg" height="20px"/> Next.js
+- <img src="./site-images/tailwind.svg" height="20px"/> Tailwind CSS
+- <img src="./site-images/framer.svg" height="20px"/> Framer Motion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### External Libraries used in this project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Resend](https://resend.com/)
+- [React Email](https://react.email/)
