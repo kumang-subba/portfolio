@@ -73,7 +73,7 @@ const ProjectDetail = ({ imageSrc, id, title, description, logo, demo, repo }: P
           <p className="font-bold text-xl flex gap-2 items-center justify-start">
             {title}
             {fullScreenProject && (
-              <MotionImage src={logo} alt={id} width={100} height={100} className="h-8 w-8" layoutId="logo" />
+              <MotionImage src={logo} alt={id} width={50} height={50} className="h-8 w-8" layoutId="logo" />
             )}
           </p>
           <div className="flex justify-between items-center">

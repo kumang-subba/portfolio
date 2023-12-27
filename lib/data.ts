@@ -42,25 +42,8 @@ export const projectData = [
     id: "Shoppio",
     description: "Ecommerce platform for selling products",
     fullImage: "/projects/shoppio-full.png",
-    cardBG: "from-[#f7f0ff] to-[#a78afe]",
-    images: [
-      {
-        src: "/projects/shoppio-1.png",
-        style: "left-0 top-0 w-full",
-      },
-      {
-        src: "/projects/shoppio-2.png",
-        style: "left-[60%] top-[50%] w-[35%] rotate-[25deg]",
-      },
-      {
-        src: "/projects/shoppio-3.png",
-        style: "left-[20%] top-[60%] w-[50%]",
-      },
-    ],
-    logo: {
-      src: "/projects/shoppio-logo.png",
-      style: "top-0 left-0 h-20 w-20",
-    },
+    logo: "/projects/shoppio-logo.png",
+
     demo: "https://kumang-subba.github.io/shoppio/",
     repo: "https://github.com/kumang-subba/shoppio",
   },
@@ -69,25 +52,8 @@ export const projectData = [
     id: "Nextcord",
     description: "Discord clone using Next.js",
     fullImage: "/projects/nextcord-full.png",
-    cardBG: "from-[#f7f0ff] to-[#addeff]",
-    images: [
-      {
-        src: "/projects/nextcord-1.png",
-        style: "left-[10%] top-[5%] w-[50%] -rotate-[20deg]",
-      },
-      {
-        src: "/projects/nextcord-2.png",
-        style: "left-[60%] top-[50%] w-[35%] rotate-[25deg]",
-      },
-      {
-        src: "/projects/nextcord-3.png",
-        style: "left-[20%] top-[50%] w-[50%]",
-      },
-    ],
-    logo: {
-      src: "/projects/nextcord-logo.png",
-      style: "top-40 left-[50%] h-10 w-10",
-    },
+    logo: "/projects/nextcord-logo.png",
+
     demo: "https://nextcord.onrender.com/",
     repo: "https://github.com/kumang-subba/nextcord",
   },
@@ -96,25 +62,7 @@ export const projectData = [
     id: "Thehub",
     description: "The Movie App using TMDb API",
     fullImage: "/projects/the-hub-full.png",
-    cardBG: "from-[#f7f0ff] to-[#ffd8ad]",
-    images: [
-      {
-        src: "/projects/the-hub-1.png",
-        style: "left-[10%] top-[10%] w-[50%] -rotate-[20deg]",
-      },
-      {
-        src: "/projects/the-hub-2.png",
-        style: "left-[60%] top-[50%] w-[35%] rotate-[25deg]",
-      },
-      {
-        src: "/projects/the-hub-3.png",
-        style: "left-[20%] top-[60%] w-[40%]",
-      },
-    ],
-    logo: {
-      src: "/projects/the-hub-logo.png",
-      style: "top-20 left-[60%] h-20 w-20",
-    },
+    logo: "/projects/the-hub-logo.png",
     demo: "https://kumang-subba.github.io/the-hub/",
     repo: "https://github.com/kumang-subba/the-hub",
   },
@@ -123,22 +71,10 @@ export const projectData = [
     id: "Blog",
     description: "Full stack blog App",
     fullImage: "/projects/blog-full.png",
-    cardBG: "from-[#f7f0ff] to-[#ffade1]",
-    images: [
-      {
-        src: "/projects/blog-1.png",
-        style: "left-0 top-[50%] w-[80%] -rotate-[20deg]",
-      },
-      {
-        src: "/projects/blog-2.png",
-        style: "left-[60%] top-[50%] w-[35%] rotate-[25deg]",
-      },
-    ],
-    logo: {
-      src: "/projects/blog-logo.png",
-      style: "top-40 left-[40%] h-20 w-20",
-    },
+    logo: "/projects/blog-logo.png",
+
     demo: "https://kumang-subba.github.io/blog-client/",
     repo: "https://github.com/kumang-subba/blog-client",
   },
 ];
+export type ProjectType = (typeof projectData)[number];
