@@ -11,7 +11,7 @@ const Education = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-40 h-screen">
+    <div className="my-40 h-screen max-w-[100%]">
       <div className="text-6xl text-center font-bold leading-relaxed">Education</div>
       <div className="w-full mx-auto relative" ref={ref}>
         <motion.div

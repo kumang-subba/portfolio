@@ -2,7 +2,7 @@ import AnimatedText from "./AnimatedText";
 
 const About = () => {
   return (
-    <div className="text-2xl md:text-3xl my-32 w-full h-screen">
+    <div className="text-2xl md:text-3xl my-32 w-full min-h-screen">
       <AnimatedText text="About me" />
       <AnimatedText
         text="Even prior to beginning my studies in BIT, I held a strong enthusiasm for coding. I delved into coding
