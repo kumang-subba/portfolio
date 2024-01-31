@@ -69,7 +69,7 @@ const TiltCard = ({
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-32 w-64 md:h-56 md:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-44 w-48 md:h-44 md:w-72 lg:h-56 lg:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
@@ -82,7 +82,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-lg md:text-4xl font-bold"
+          className="text-center text-lg md:text-2xl lg:text-4xl font-bold"
         >
           {title}
         </h1>
