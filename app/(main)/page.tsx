@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="px-32 py-10">
+    <main className="px-16 md:px-32 py-10">
       <HomeBanner />
       <About />
       <Skills />

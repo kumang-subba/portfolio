@@ -69,7 +69,7 @@ const TiltCard = ({
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-56 w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-32 w-64 md:h-56 md:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
@@ -82,7 +82,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-4xl font-bold"
+          className="text-center text-lg md:text-4xl font-bold"
         >
           {title}
         </h1>
@@ -90,7 +90,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-sm font-bold"
+          className="text-center text-xs md:text-sm font-bold"
         >
           {institution}
         </p>
@@ -98,7 +98,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-sm font-semibold"
+          className="text-center text-xs md:text-sm font-semibold"
         >
           {location}
         </p>
@@ -106,7 +106,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-sm font-semibold"
+          className="text-center text-xs md:text-sm font-semibold"
         >
           {timeline}
         </p>

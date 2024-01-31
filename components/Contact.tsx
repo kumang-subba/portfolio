@@ -30,7 +30,6 @@ const Contact = () => {
       }
     } catch (error) {
       setSubmitSuccess(false);
-      console.log(error);
     }
   };
   useEffect(() => {
@@ -40,7 +39,6 @@ const Contact = () => {
     return () => clearTimeout(reset);
   }, [submitSuccess]);
   const isLoading = formState.isSubmitting;
-  console.log(submitSuccess);
   return (
     <div className="h-full w-full flex items-center justify-center ">
       <motion.div className="flex rounded-lg ">

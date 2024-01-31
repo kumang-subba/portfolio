@@ -25,7 +25,7 @@ const NavBar = () => {
 
   return (
     <motion.nav
-      className={cn("flex w-full px-32 h-16 shadow-black shadow justify-between items-center fixed z-50 bg-indigo-900")}
+      className={cn("flex w-full px-16 md:px-32 h-16 shadow-black shadow justify-between items-center fixed z-50 bg-indigo-900")}
       animate={{ y: hidden ? "-100%" : 0 }}
       initial={{ y: 0 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
@@ -35,9 +35,9 @@ const NavBar = () => {
         <CustomLink href={"/projects"}>Projects</CustomLink>
         <CustomLink href={"/contact"}>Contact me</CustomLink>
       </div>
-      <div className="block lg:absolute left-[50%] top-3 translate-x-[-50%]">
+      <div className="block lg:absolute left-[50%] top-3 translate-x-[0] md:translate-x-[-50%]">
         <motion.h1
-          className="font-semibold text-3xl tracking-wider"
+          className="font-semibold text-xl md:text-3xl tracking-wider"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
         >

@@ -88,7 +88,7 @@ const HomeBanner = () => {
     <div className={cn("w-full mx-auto py-40")}>
       <AnimatePresence>
         <motion.h1
-          className={"inline-block w-full font-bold text-6xl tracking-wide leading-normal"}
+          className={"inline-block w-full font-bold text-3xl md:text-6xl tracking-wide leading-normal"}
           variants={quote}
           initial="initial"
           animate="animate"
