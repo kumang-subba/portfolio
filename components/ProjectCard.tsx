@@ -26,7 +26,7 @@ const Card = ({ id, children }: ProjectCardProps) => {
         )}
         onClick={() => {
           setFullScreenProject(id);
-          // window.document.body.style.overflow = "hidden";
+          window.document.body.style.overflow = "hidden";
         }}
       >
         View Project
