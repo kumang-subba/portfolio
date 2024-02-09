@@ -16,15 +16,15 @@ const quote = {
 
 const AnimatedText = ({ text, className = "" }: AnimatedTextProps) => {
   return (
-    <div className={cn("w-full mx-auto py-2 flex overflow-hidden text-center")}>
+    <div className={cn("w-full py-2 flex text-center")}>
       <AnimatePresence>
         <motion.h1
-          className={cn(`inline-block w-full font-bold text-6xl`, className)}
+          className={cn(`inline-block w-full font-bold`, className)}
           variants={quote}
           initial="initial"
           whileInView={{
             opacity: 1,
-            y: -10,
+            y: 0,
           }}
         >
           {text}

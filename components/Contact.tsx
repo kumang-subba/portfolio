@@ -41,16 +41,16 @@ const Contact = () => {
   const isLoading = formState.isSubmitting;
   return (
     <div className="h-full w-full flex items-center justify-center ">
-      <motion.div className="flex rounded-lg ">
+      <motion.div className="flex rounded-lg w-full items-center justify-center h-[80%]">
         <div
           className={cn(
-            "flex flex-col p-4 bg-violet-600 lg:rounded-l-lg rounded-lg lg:w-96 w-full justify-evenly",
+            "flex flex-col p-4 bg-violet-600 lg:rounded-l-lg lg:rounded-r-none rounded-lg lg:w-72 w-[80%] justify-evenly h-full",
 
             isCompany ? "bg-indigo-600" : "bg-violet-600"
           )}
         >
-          <h1 className="text-2xl font-bold">Contact me</h1>
-          <p>
+          <h1 className="text-xl md:text-2xl font-bold">Contact me</h1>
+          <p className="text-sm md:text-base">
             You can contact me directly at{" "}
             <a className="underline" href="mailto:kumangsubba@gmail.com">
               kumangsubba@gmail.com
@@ -58,11 +58,11 @@ const Contact = () => {
             or through this form.
           </p>
           <form onSubmit={handleSubmit(handleFormSubmit)}>
-            <div className="py-2 flex flex-col gap-4">
+            <div className="py-1 md:py-2 flex flex-col gap-2 md:gap-4">
               <input
                 type="text"
                 className={cn(
-                  "h-10 px-4 rounded-lg   bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
+                  "px-2 h-8 md:h-10 md:px-4 rounded-lg   bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Your name"
@@ -73,7 +73,7 @@ const Contact = () => {
               <input
                 type="email"
                 className={cn(
-                  "h-10 px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
+                  "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Your email address"
@@ -87,7 +87,7 @@ const Contact = () => {
               <motion.input
                 type="text"
                 className={cn(
-                  "h-0 px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none hidden disabled:text-gray-300",
+                  "h-0 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none hidden disabled:text-gray-300",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Company name"
@@ -137,7 +137,7 @@ const Contact = () => {
           </form>
         </div>
         <motion.div
-          className="bg-purple-800 relative overflow-hidden hidden lg:block"
+          className="bg-purple-800 lg:flex flex-[0_0_50%] overflow-hidden hidden w-full min-h-full max-h-full rounded-r-lg"
           initial={false}
           animate={{
             height: isCompany ? 700 : 600,
@@ -157,7 +157,7 @@ const Contact = () => {
               style={{
                 backgroundImage: "url(/personal.jpg)",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                // backgroundPosition: "center",
               }}
               className="aspect-auto w-full shrink-0 bg-neutral-800 object-cover"
             />
@@ -165,7 +165,7 @@ const Contact = () => {
               style={{
                 backgroundImage: "url(/work.jpg)",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                // backgroundPosition: "center",
               }}
               className="aspect-auto w-full shrink-0 bg-neutral-800 object-cover"
             />

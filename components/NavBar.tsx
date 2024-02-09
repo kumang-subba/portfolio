@@ -25,19 +25,19 @@ const NavBar = () => {
 
   return (
     <motion.nav
-      className={cn("flex w-full px-16 md:px-32 h-16 shadow-black shadow justify-between items-center fixed z-50 bg-indigo-900")}
+      className={cn("flex w-full px-8 sm:px-16 md:px-32 h-16 shadow-black shadow justify-between items-center fixed z-50 bg-indigo-900")}
       animate={{ y: hidden ? "-100%" : 0 }}
       initial={{ y: 0 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
     >
-      <div className="flex gap-2 items-center justify-center">
+      <div className="flex gap-1 md:gap-2 items-center justify-center">
         <CustomLink href={"/"}>Home</CustomLink>
         <CustomLink href={"/projects"}>Projects</CustomLink>
         <CustomLink href={"/contact"}>Contact me</CustomLink>
       </div>
-      <div className="block lg:absolute left-[50%] top-3 translate-x-[0] md:translate-x-[-50%]">
+      <div className="lg:absolute lg:left-[50%] lg:top-3 lg:translate-x-[-50%] static ml-auto">
         <motion.h1
-          className="font-semibold text-xl md:text-3xl tracking-wider"
+          className="font-semibold text-sm md:text-xl lg:text-3xl tracking-tight md:tracking-wider text-nowrap"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
         >
@@ -56,7 +56,7 @@ const CustomLink = ({ children, ...props }: { children: React.ReactNode } & Link
   return (
     <MotionLink
       {...props}
-      className={cn("group relative xl:text-xl text-sm", path === props.href && "font-semibold")}
+      className={cn("group relative text-[10px] xl:text-xl md:text-sm text-nowrap", path === props.href && "font-semibold")}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
     >

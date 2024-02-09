@@ -16,38 +16,33 @@ export const skillsData = [
   "Bootstrap",
 ] as const;
 export type SKillsType = (typeof skillsData)[number];
-export const educationData = [
+export const experienceData = [
   {
-    title: "School Leaving Certificate",
-    institution: "United School",
+    title: "Accountant",
+    company: "Kang Hydropower Company",
     location: "Nepal",
-    timeline: "June 2002 - March 2008",
+    timeline: "Nov 2018 - Dec 2022",
   },
   {
-    title: "GCE A Levels",
-    institution: "Lumbini International College",
-    location: "Nepal",
-    timeline: "May 2008 - June 2010",
-  },
-  {
-    title: "Business Information Technology",
-    institution: "Laurea University of Applied Sciences",
-    location: "Finland",
-    timeline: "August 2023 - Ongoing",
+    title: "Frontend Developer Intern",
+    company: "Kreativstorm",
+    location: "Berlin, Germany, Remote",
+    timeline: "Jan 2024 - Present",
   },
 ];
 export const projectData = [
   {
-    title: "Shoppio: Ecommerce",
+    shortTitle:"Shoppio",
+    title: "Shoppio: Ecommerce platform",
     id: "Shoppio",
     description: "Ecommerce platform for selling products",
     fullImage: "/projects/shoppio-full.png",
     logo: "/projects/shoppio-logo.png",
-
     demo: "https://kumang-subba.github.io/shoppio/",
     repo: "https://github.com/kumang-subba/shoppio",
   },
   {
+    shortTitle:"NextCord",
     title: "NextCord: Discord Clone",
     id: "Nextcord",
     description: "Discord clone using Next.js",
@@ -58,6 +53,7 @@ export const projectData = [
     repo: "https://github.com/kumang-subba/nextcord",
   },
   {
+    shortTitle:"The Hub",
     title: "The Hub: The Movie App",
     id: "Thehub",
     description: "The Movie App using TMDb API",
@@ -67,6 +63,7 @@ export const projectData = [
     repo: "https://github.com/kumang-subba/the-hub",
   },
   {
+    shortTitle:"Blog App",
     title: "Blog: Blog App",
     id: "Blog",
     description: "Full stack blog App",

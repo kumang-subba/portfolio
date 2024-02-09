@@ -1,8 +1,8 @@
 import About from "@/components/About";
-import Education from "@/components/Education";
 import HomeBanner from "@/components/HomeBanner";
 import Skills from "@/components/Skills";
 import type { Metadata } from "next";
+import Experience from "@/components/Experience";
 
 export const metadata: Metadata = {
   title: "Kumang",
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 export default function Home() {
   return (
-    <main className="px-16 md:px-32 py-10 overflow-hidden">
+    <main className="px-8 sm:px-16 md:px-32 py-5 sm:py-10 overflow-hidden">
       <HomeBanner />
       <About />
       <Skills />
-      <Education />
+      <Experience />
     </main>
   );
 }
