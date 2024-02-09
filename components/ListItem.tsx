@@ -1,15 +1,15 @@
 interface ListItemProps {
   title: string;
-  institution: string;
+  company: string;
   location: string;
   timeline: string;
 }
 
-const ListItem = ({ title, institution, location, timeline }: ListItemProps) => {
+const ListItem = ({ title, company, location, timeline }: ListItemProps) => {
   return (
     <>
       <li className="even:translate-x-[60%] odd:translate-x-[-60%]">
-        <TiltCard title={title} institution={institution} location={location} timeline={timeline} />
+        <TiltCard title={title} company={company} location={location} timeline={timeline} />
       </li>
     </>
   );
@@ -21,12 +21,12 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const TiltCard = ({
   title,
-  institution,
+  company,
   location,
   timeline,
 }: {
   title: string;
-  institution: string;
+  company: string;
   location: string;
   timeline: string;
 }) => {
@@ -69,7 +69,7 @@ const TiltCard = ({
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-44 w-48 md:h-44 md:w-72 lg:h-56 lg:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-52 w-[8.5rem] md:h-44 md:w-72 lg:h-56 lg:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
@@ -82,7 +82,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-lg md:text-2xl lg:text-4xl font-bold"
+          className="text-center text-base md:text-xl lg:text-4xl font-semibold md:font-bold"
         >
           {title}
         </h1>
@@ -90,15 +90,15 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-xs md:text-sm font-bold"
+          className="text-center text-xs md:text-sm lg:text-xl font-semibold md:font-bold"
         >
-          {institution}
+          {company}
         </p>
         <p
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-xs md:text-sm font-semibold"
+          className="text-center text-xs md:text-sm lg:text-xl font-semibold md:font-bold"
         >
           {location}
         </p>
@@ -106,7 +106,7 @@ const TiltCard = ({
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-xs md:text-sm font-semibold"
+          className="text-center text-xs md:text-sm lg:text-xl font-medium"
         >
           {timeline}
         </p>

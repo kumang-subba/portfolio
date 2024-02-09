@@ -17,40 +17,16 @@ const MotionImage = motion(Image);
 const Card = ({ id, children }: ProjectCardProps) => {
   const { fullScreenProject, setFullScreenProject } = useProjectViewStore();
   return (
-    <div className={cn("absolute inset-0 h-full w-full rounded-2xl overflow-hidden")}>
-      {/* {images.map((image, index) => (
-        <Image
-          key={`${id}-${index}`}
-          src={image.src}
-          alt={`${id}-${index}`}
-          className={cn(
-            "absolute rounded-xl shadow-lg transition-transform duration-1000",
-            image.style,
-            fullScreenProject ? "scale-0" : "scale-100"
-          )}
-          width={500}
-          height={500}
-        />
-      ))}
-      {!fullScreenProject && (
-        <MotionImage
-          layoutId="logo"
-          src={logo.src}
-          alt={`${id}-logo`}
-          className={cn("absolute rounded-xl", logo.style)}
-          width={50}
-          height={50}
-        />
-      )} */}
+    <div className={cn("absolute inset-0 rounded-2xl overflow-hidden")}>
       {children}
       <button
         className={cn(
-          "absolute bottom-6 right-6 rounded-lg bg-black px-4 py-2 font-semibold transition-transform duration-300 origin-bottom-right",
+          "absolute bottom-3 right-3 md:bottom-6 md:right-6 rounded-lg bg-black px-2 py-1 md:px-4 md:py-2 font-medium md:font-semibold transition-transform duration-300 origin-bottom-right text-xs md:text-base lg:text-lg text-nowrap",
           fullScreenProject ? "pointer-events-none scale-0" : "pointer-events-auto scale-100"
         )}
         onClick={() => {
           setFullScreenProject(id);
-          window.document.body.style.overflow = "hidden";
+          // window.document.body.style.overflow = "hidden";
         }}
       >
         View Project
@@ -108,7 +84,7 @@ export const ProjectCard: Projects = {
           layoutId="logo"
           src="/projects/shoppio-logo.png"
           alt="Shoppio logo"
-          className={cn("absolute rounded-xl top-0 left-0 h-20 w-20")}
+          className={cn("absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20")}
           width={50}
           height={50}
         />
@@ -208,7 +184,7 @@ export const ProjectCard: Projects = {
           layoutId="logo"
           src="/projects/the-hub-logo.png"
           alt="The-hub logo"
-          className={cn("absolute rounded-xl top-20 left-[60%] h-20 w-20")}
+          className={cn("absolute rounded-xl top-20 left-[60%] h-10 w-10 md:h-20 md:w-20")}
           width={50}
           height={50}
         />
@@ -248,7 +224,7 @@ export const ProjectCard: Projects = {
           layoutId="logo"
           src="/projects/blog-logo.png"
           alt="Blog logo"
-          className={cn("absolute rounded-xl top-0 left-0 h-20 w-20")}
+          className={cn("absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20")}
           width={50}
           height={50}
         />

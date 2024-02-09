@@ -13,7 +13,7 @@ const Parallax = () => {
   return (
     <div className="w-full h-screen overflow-hidden relative grid place-items-center" ref={ref}>
       <motion.h1
-        className="font-bold text-4xl md:text-6xl relative z-10 pb-20 pr-10 mx-auto w-1/2"
+        className="font-bold text-2xl md:text-4xl lg:text-6xl relative z-10 pb-20 pr-10 mx-auto w-1/2"
         style={{ y: textY }}
       >
         Exploring Boundaries, Crafting Solutions.

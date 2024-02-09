@@ -85,10 +85,10 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
 
 const HomeBanner = () => {
   return (
-    <div className={cn("w-full mx-auto py-40")}>
+    <div className={cn("w-full mx-auto pt-20 md:pt-32 lg:py-40 lg:h-screen")}>
       <AnimatePresence>
         <motion.h1
-          className={"inline-block w-full font-bold text-3xl md:text-6xl tracking-wide leading-normal"}
+          className={"inline-block w-full font-bold text-xl md:text-3xl lg:text-6xl tracking-wide leading-normal"}
           variants={quote}
           initial="initial"
           animate="animate"
@@ -112,19 +112,19 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Web Developer." imgSrc="/developer.png" />
-          <motion.div className="flex py-8 gap-4 items-center" variants={singleWord}>
-            <Link className="flex cursor-pointer gap-1 text-lg font-medium group relative" href={"/contact"}>
+          <ImageSpan text="Frontend Developer." imgSrc="/developer.png" />
+          <motion.div className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center" variants={singleWord}>
+            <Link className="flex cursor-pointer gap-0 md:gap-1 text-xs md:text-md lg:text-lg font-medium group relative text-nowrap" href={"/contact"}>
               Contact me
-              <ArrowRight />
-              <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0.5 group-hover:w-full transition-[width] ease duration-300 w-0 ">
+              <ArrowRight className="w-4 h-4 lg:w-8 lg:h-8" />
+              <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0 group-hover:w-full transition-[width] ease duration-300 w-0 ">
                 &nbsp;
               </span>
             </Link>
-            <a href="/CV.pdf" download className="flex group cursor-pointer gap-1 text-lg font-medium group relative">
+            <a href="/CV.pdf" download className="flex group cursor-pointer gap-1 text-xs md:text-md lg:text-lg font-medium group relative">
               Resume
-              <ArrowDownToLine />
-              <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0.5 group-hover:w-full transition-[width] ease duration-300 w-0 ">
+              <ArrowDownToLine className="w-4 h-4 lg:w-8 lg:h-8" />
+              <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0 group-hover:w-full transition-[width] ease duration-300 w-0 ">
                 &nbsp;
               </span>
             </a>

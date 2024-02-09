@@ -16,7 +16,7 @@ const Project = ({ children, id }: { children: React.ReactNode; id: string }) =>
   return (
     <p
       className={cn(
-        "py-16 text-5xl font-bold transition-colors project-title",
+        "py-16 text-xl md:text-3xl lg:text-5xl font-bold transition-colors project-title",
         isInView ? "text-white/95" : "text-gray-500"
       )}
       ref={ref}
