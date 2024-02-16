@@ -85,7 +85,7 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
 
 const HomeBanner = () => {
   return (
-    <div className={cn("w-full mx-auto pt-20 md:pt-32 lg:py-40 lg:h-screen")}>
+    <div className={cn("w-full flex flex-col items-center justify-center h-screen")}>
       <AnimatePresence>
         <motion.h1
           className={"inline-block w-full font-bold text-xl md:text-3xl lg:text-6xl tracking-wide leading-normal"}
