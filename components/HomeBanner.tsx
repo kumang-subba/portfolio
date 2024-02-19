@@ -44,7 +44,10 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
     if (imageRef.current && spanRef.current) {
       imageRef.current.style.display = "inline-block";
       const rect = spanRef.current.getBoundingClientRect();
-      if (event.clientX + imageRef.current.clientWidth + 5 >= window.document.documentElement.clientWidth) {
+      if (
+        event.clientX + imageRef.current.clientWidth + 5 >=
+        window.document.documentElement.clientWidth
+      ) {
         x.set(event.clientX - rect.left - imageRef.current.clientWidth - 0);
       } else {
         x.set(event.clientX - rect.left + 20);
@@ -85,16 +88,26 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
 
 const HomeBanner = () => {
   return (
-    <div className={cn("w-full flex flex-col items-center justify-center h-screen")}>
+    <div
+      className={cn(
+        "w-full flex flex-col items-center justify-center h-screen"
+      )}
+    >
       <AnimatePresence>
         <motion.h1
-          className={"inline-block w-full font-bold text-xl md:text-3xl lg:text-6xl tracking-wide leading-normal"}
+          className={
+            "inline-block w-full font-bold text-xl md:text-3xl lg:text-6xl tracking-wide leading-normal"
+          }
           variants={quote}
           initial="initial"
           animate="animate"
         >
           {"Hello, I'm".split(" ").map((word, index) => (
-            <motion.span key={word + "-" + index + "-c"} className="inline-block" variants={singleWord}>
+            <motion.span
+              key={word + "-" + index + "-c"}
+              className="inline-block"
+              variants={singleWord}
+            >
               {word}&nbsp;
             </motion.span>
           ))}
@@ -102,26 +115,44 @@ const HomeBanner = () => {
           {"I am a student of Business Information Technology, at Laurea University of Applied Sciences,"
             .split(" ")
             .map((word, index) => (
-              <motion.span key={word + "-" + index + "-b"} className="inline-block" variants={singleWord}>
+              <motion.span
+                key={word + "-" + index + "-b"}
+                className="inline-block"
+                variants={singleWord}
+              >
                 {word}&nbsp;
               </motion.span>
             ))}
           <ImageSpan text="Finland." imgSrc="/finland.png" />{" "}
           {"I'm a".split(" ").map((word, index) => (
-            <motion.span key={word + "-" + index + "-a"} className="inline-block" variants={singleWord}>
+            <motion.span
+              key={word + "-" + index + "-a"}
+              className="inline-block"
+              variants={singleWord}
+            >
               {word}&nbsp;
             </motion.span>
           ))}
           <ImageSpan text="Frontend Developer." imgSrc="/developer.png" />
-          <motion.div className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center" variants={singleWord}>
-            <Link className="flex cursor-pointer gap-0 md:gap-1 text-xs md:text-md lg:text-lg font-medium group relative text-nowrap" href={"/contact"}>
+          <motion.div
+            className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center"
+            variants={singleWord}
+          >
+            <Link
+              className="flex cursor-pointer gap-0 md:gap-1 text-xs md:text-md lg:text-lg font-medium group relative text-nowrap"
+              href={"/contact"}
+            >
               Contact me
               <ArrowRight className="w-4 h-4 lg:w-8 lg:h-8" />
               <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0 group-hover:w-full transition-[width] ease duration-300 w-0 ">
                 &nbsp;
               </span>
             </Link>
-            <a href="/CV.pdf" download className="flex group cursor-pointer gap-1 text-xs md:text-md lg:text-lg font-medium group relative">
+            <a
+              href="/CV.pdf"
+              download
+              className="flex group cursor-pointer gap-1 text-xs md:text-md lg:text-lg font-medium group relative"
+            >
               Resume
               <ArrowDownToLine className="w-4 h-4 lg:w-8 lg:h-8" />
               <span className="h-[1px] inline-block bg-white absolute left-0 bottom-0 group-hover:w-full transition-[width] ease duration-300 w-0 ">
