@@ -15,7 +15,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 function FrozenRouter(props: PropsWithChildren<{}>) {
   const context = useContext(LayoutRouterContext);
   const frozen = useRef(context).current;
-  
+
   return <LayoutRouterContext.Provider value={frozen}>{props.children}</LayoutRouterContext.Provider>;
 }
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       >
         <NavBar />
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" >
           <motion.div key={path}>
             <FrozenRouter>
               <Transition />

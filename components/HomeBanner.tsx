@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import { ArrowDownToLine, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { MouseEvent, useRef } from "react";
+import { MouseEvent, useEffect, useRef } from "react";
 import { Icons } from "./Icons";
 
 const MotionImage = motion(Image);
@@ -62,6 +62,9 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
     x.set(0);
     y.set(0);
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[])
   return (
     <motion.span
       className="inline-block underline relative cursor-pointer"
