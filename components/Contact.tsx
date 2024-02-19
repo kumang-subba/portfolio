@@ -8,10 +8,13 @@ import { Check, Loader2, Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import CheckBox from "./Checkbox";
+import Image from "next/image";
 
 const Contact = () => {
   const [isCompany, setIsCompany] = useState<boolean>(false);
-  const [submitSuccess, setSubmitSuccess] = useState<undefined | boolean>(undefined);
+  const [submitSuccess, setSubmitSuccess] = useState<undefined | boolean>(
+    undefined
+  );
   const { handleSubmit, register, formState } = useForm({
     resolver: zodResolver(EmailValidator),
     defaultValues: {
@@ -40,16 +43,18 @@ const Contact = () => {
   }, [submitSuccess]);
   const isLoading = formState.isSubmitting;
   return (
-    <div className="h-full w-full flex items-center justify-center ">
-      <motion.div className="flex rounded-lg w-full items-center justify-center h-[80%]">
+    <div className="h-full w-full flex items-center justify-center">
+      <motion.div className="flex rounded-lg w-5/6 md:w-2/3 lg:w-auto max-w-[90%] justify-center">
         <div
           className={cn(
-            "flex flex-col p-4 bg-violet-600 lg:rounded-l-lg lg:rounded-r-none rounded-lg lg:w-72 w-[80%] justify-evenly h-full",
+            "flex flex-col p-4 bg-violet-600 lg:rounded-l-lg lg:rounded-r-none rounded-lg lg:w-72 w-[100%] min-h-full",
 
             isCompany ? "bg-indigo-600" : "bg-violet-600"
           )}
         >
-          <h1 className="text-xl md:text-2xl font-bold">Contact me</h1>
+          <h1 className="text-xl md:text-2xl font-bold basis-auto">
+            Contact me
+          </h1>
           <p className="text-sm md:text-base">
             You can contact me directly at{" "}
             <a className="underline" href="mailto:kumangsubba@gmail.com">
@@ -62,7 +67,7 @@ const Contact = () => {
               <input
                 type="text"
                 className={cn(
-                  "px-2 h-8 md:h-10 md:px-4 rounded-lg   bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
+                  "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Your name"
@@ -73,7 +78,7 @@ const Contact = () => {
               <input
                 type="email"
                 className={cn(
-                  "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
+                  "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Your email address"
@@ -81,13 +86,17 @@ const Contact = () => {
                 {...register("email")}
                 disabled={isLoading}
               />
-              <CheckBox id="personal" isChecked={isCompany} setIsChecked={setIsCompany}>
+              <CheckBox
+                id="personal"
+                isChecked={isCompany}
+                setIsChecked={setIsCompany}
+              >
                 Do you represent a company?
               </CheckBox>
               <motion.input
                 type="text"
                 className={cn(
-                  "h-0 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none hidden disabled:text-gray-300",
+                  "h-0 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none hidden disabled:text-gray-300 text-sm md:text-base",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Company name"
@@ -103,7 +112,7 @@ const Contact = () => {
               />
               <textarea
                 className={cn(
-                  "h-52 py-3 px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300",
+                  "h-52 py-1 md:py-3 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
                   isCompany ? "bg-indigo-800" : "bg-violet-800"
                 )}
                 placeholder="Your message"
@@ -136,38 +145,31 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <motion.div
-          className="bg-purple-800 lg:flex flex-[0_0_50%] overflow-hidden hidden w-full min-h-full max-h-full rounded-r-lg"
-          initial={false}
-          animate={{
-            height: isCompany ? 700 : 600,
-            width: isCompany ? 700 : 600,
-            transition: {
-              type: "spring",
-            },
-          }}
-        >
+        <motion.div className="hidden lg:flex flex-[0_0_50%] overflow-hidden rounded-r-lg z-20 bg-gradient-to-b from-indigo-900/45 via-black to-black">
           <motion.div
-            className="flex w-full h-full"
+            className="flex min-h-fit"
             animate={{
               translateX: isCompany ? "-100%" : "0%",
+              transition: {
+                type: "tween",
+              },
             }}
           >
-            <motion.div
-              style={{
-                backgroundImage: "url(/personal.jpg)",
-                backgroundSize: "cover",
-                // backgroundPosition: "center",
-              }}
-              className="aspect-auto w-full shrink-0 bg-neutral-800 object-cover"
+            <Image
+              src={"/personal.jpg"}
+              alt={"personal"}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto object-cover"
             />
-            <motion.div
-              style={{
-                backgroundImage: "url(/work.jpg)",
-                backgroundSize: "cover",
-                // backgroundPosition: "center",
-              }}
-              className="aspect-auto w-full shrink-0 bg-neutral-800 object-cover"
+            <Image
+              src={"/work.jpg"}
+              alt={"work"}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto object-cover"
             />
           </motion.div>
         </motion.div>

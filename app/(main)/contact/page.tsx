@@ -7,7 +7,7 @@ const Page = () => {
     window.scrollTo(0, 0);
   },[])
   return (
-    <main className="h-screen">
+    <main className="pt-16 md:pt-32 min-h-screen">
       <Contact />
     </main>
   );

@@ -47,7 +47,7 @@ const NavBar = () => {
         <CustomLink href={"/projects"}>Projects</CustomLink>
         <CustomLink href={"/contact"}>Contact me</CustomLink>
       </div>
-      <div className="lg:absolute lg:left-[50%] lg:top-3 lg:translate-x-[-50%] static ml-auto">
+      <div className="lg:absolute lg:left-[50%] lg:top-5 lg:translate-x-[-50%] static ml-auto">
         <motion.h1
           className="font-semibold text-sm md:text-xl lg:text-3xl tracking-tight md:tracking-wider text-nowrap"
           initial={{ opacity: 0, scale: 0.5 }}
