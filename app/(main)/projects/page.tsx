@@ -3,7 +3,7 @@ import Projects from "@/components/Projects";
 
 const Page = () => {
   return (
-    <main className="py-16">
+    <main className="pb-16">
       <Parallax />
       <Projects />
     </main>

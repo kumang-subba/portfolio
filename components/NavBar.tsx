@@ -33,10 +33,10 @@ const NavBar = () => {
   return (
     <motion.nav
       className={cn(
-        "flex w-full px-8 sm:px-16 md:px-32 h-20 justify-between items-center fixed z-50 bg-transparent",
+        "flex w-full px-8 sm:px-16 md:px-32 h-20 justify-between items-center fixed z-50",
         scrollPosition > 0
           ? "backdrop-blur-lg bg-indigo-800/20"
-          : "backdrop-blur-0"
+          : "backdrop-blur-0 bg-indigo-50/0"
       )}
       animate={{ y: hidden ? "-100%" : 0 }}
       initial={{ y: 0 }}

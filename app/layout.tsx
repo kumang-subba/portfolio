@@ -15,7 +15,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 function FrozenRouter(props: PropsWithChildren<{}>) {
   const context = useContext(LayoutRouterContext);
   const frozen = useRef(context).current;
-
+  
   return <LayoutRouterContext.Provider value={frozen}>{props.children}</LayoutRouterContext.Provider>;
 }
 

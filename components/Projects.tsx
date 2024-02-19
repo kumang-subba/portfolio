@@ -88,7 +88,7 @@ const Projects = () => {
   const CurrentCard = ProjectCard[currentProject?.id as keyof typeof ProjectCard];
   return (
     <div className="max-w-6xl px-4 mx-auto">
-      <h1 className="text-center font-bold uppercase text-2xl md:text-4xl lg:text-6xl leading-loose">Projects</h1>
+      <h1 className="text-center font-bold uppercase text-2xl md:text-4xl lg:text-6xl leading-loose pt-8">Projects</h1>
       <div ref={scope}>
         {currentProject && (
           <ProjectDetail
