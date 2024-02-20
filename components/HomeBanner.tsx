@@ -64,7 +64,7 @@ const ImageSpan = ({ text, imgSrc }: { text: string; imgSrc: string }) => {
   }
   useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
   return (
     <motion.span
       className="inline-block underline relative cursor-pointer"
@@ -152,8 +152,7 @@ const HomeBanner = () => {
               </span>
             </Link>
             <a
-              href="/CV.pdf"
-              download
+              href="/resume"
               className="flex group cursor-pointer gap-1 text-xs md:text-md lg:text-lg font-medium group relative"
             >
               Resume
