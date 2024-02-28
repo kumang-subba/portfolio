@@ -136,7 +136,7 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Frontend Developer." imgSrc="/developer.png" />
+          <ImageSpan text="Full Stack Developer." imgSrc="/developer.png" />
           <motion.div
             className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center"
             variants={singleWord}
