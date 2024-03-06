@@ -24,15 +24,15 @@ export const experienceData = [
     timeline: "Nov 2018 - Dec 2022",
   },
   {
-    title: "Frontend Developer Intern",
+    title: "Frontend Developer Training",
     company: "Kreativstorm",
     location: "Berlin, Germany, Remote",
-    timeline: "Jan 2024 - Present",
+    timeline: "Jan 2024 - Feb 2024",
   },
 ];
 export const projectData = [
   {
-    shortTitle:"Shoppio",
+    shortTitle: "Shoppio",
     title: "Shoppio: Ecommerce platform",
     id: "Shoppio",
     description: "Ecommerce platform for selling products",
@@ -42,7 +42,7 @@ export const projectData = [
     repo: "https://github.com/kumang-subba/shoppio",
   },
   {
-    shortTitle:"NextCord",
+    shortTitle: "NextCord",
     title: "NextCord: Discord Clone",
     id: "Nextcord",
     description: "Discord clone using Next.js",
@@ -53,7 +53,7 @@ export const projectData = [
     repo: "https://github.com/kumang-subba/nextcord",
   },
   {
-    shortTitle:"The Hub",
+    shortTitle: "The Hub",
     title: "The Hub: The Movie App",
     id: "Thehub",
     description: "The Movie App using TMDb API",
@@ -63,7 +63,7 @@ export const projectData = [
     repo: "https://github.com/kumang-subba/the-hub",
   },
   {
-    shortTitle:"Blog App",
+    shortTitle: "Blog App",
     title: "Blog: Blog App",
     id: "Blog",
     description: "Full stack blog App",
