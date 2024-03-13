@@ -22,7 +22,9 @@ const Card = ({ id, children }: ProjectCardProps) => {
       <button
         className={cn(
           "absolute bottom-3 right-3 md:bottom-6 md:right-6 rounded-lg bg-black px-2 py-1 md:px-4 md:py-2 font-medium md:font-semibold transition-transform duration-300 origin-bottom-right text-xs md:text-base lg:text-lg text-nowrap",
-          fullScreenProject ? "pointer-events-none scale-0" : "pointer-events-auto scale-100"
+          fullScreenProject
+            ? "pointer-events-none scale-0"
+            : "pointer-events-auto scale-100"
         )}
         onClick={() => {
           setFullScreenProject(id);
@@ -38,7 +40,7 @@ type Projects = {
   Shoppio: (props: CardProps) => JSX.Element;
   Nextcord: (props: CardProps) => JSX.Element;
   Thehub: (props: CardProps) => JSX.Element;
-  Blog: (props: CardProps) => JSX.Element;
+  PostBlogApp: (props: CardProps) => JSX.Element;
 };
 export const ProjectCard: Projects = {
   Shoppio: ({ id, isFullScreen }: CardProps) => (
@@ -84,7 +86,9 @@ export const ProjectCard: Projects = {
           layoutId="logo"
           src="/projects/shoppio-logo.png"
           alt="Shoppio logo"
-          className={cn("absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20")}
+          className={cn(
+            "absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20"
+          )}
           width={50}
           height={50}
         />
@@ -184,14 +188,16 @@ export const ProjectCard: Projects = {
           layoutId="logo"
           src="/projects/the-hub-logo.png"
           alt="The-hub logo"
-          className={cn("absolute rounded-xl top-20 left-[60%] h-10 w-10 md:h-20 md:w-20")}
+          className={cn(
+            "absolute rounded-xl top-20 left-[60%] h-10 w-10 md:h-20 md:w-20"
+          )}
           width={50}
           height={50}
         />
       )}
     </Card>
   ),
-  Blog: ({ id, isFullScreen }: CardProps) => (
+  PostBlogApp: ({ id, isFullScreen }: CardProps) => (
     <Card id={id}>
       <div
         className={cn(
@@ -199,17 +205,17 @@ export const ProjectCard: Projects = {
         )}
       />
       <Image
-        src="/projects/blog-1.png"
+        src="/projects/post-blog-1.png"
         alt="Blog Image 1"
         className={cn(
-          "absolute rounded-xl shadow-lg transition-transform duration-1000 left-0 top-[50%] w-[80%] -rotate-[20deg]",
+          "absolute rounded-xl shadow-lg transition-transform duration-1000 left-0 top-[10%] w-[80%] -rotate-[20deg]",
           isFullScreen ? "scale-0" : "scale-100"
         )}
-        width={200}
-        height={200}
+        width={250}
+        height={250}
       />
       <Image
-        src="/projects/blog-2.png"
+        src="/projects/post-blog-2.png"
         alt="Blog Image 2"
         className={cn(
           "absolute rounded-xl shadow-lg transition-transform duration-1000 left-[60%] top-[50%] w-[35%] rotate-[25deg]",
@@ -218,14 +224,25 @@ export const ProjectCard: Projects = {
         width={200}
         height={200}
       />
-
+      <Image
+        src="/projects/post-blog-3.png"
+        alt="The-hub Image 3"
+        className={cn(
+          "absolute rounded-xl shadow-lg transition-transform duration-1000 left-[20%] top-[60%] w-[40%]",
+          isFullScreen ? "scale-0" : "scale-100"
+        )}
+        width={200}
+        height={200}
+      />
       {!isFullScreen && (
         <MotionImage
           layoutId="logo"
-          src="/projects/blog-logo.png"
-          alt="Blog logo"
-          className={cn("absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20")}
-          width={50}
+          src="/projects/post-blog-logo.png"
+          alt="Post:Blog logo"
+          className={cn(
+            "absolute rounded-xl top-0 left-0 h-10 w-10 md:h-20 md:w-20"
+          )}
+          width={500}
           height={50}
         />
       )}

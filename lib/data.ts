@@ -32,14 +32,15 @@ export const experienceData = [
 ];
 export const projectData = [
   {
-    shortTitle: "Shoppio",
-    title: "Shoppio: Ecommerce platform",
-    id: "Shoppio",
-    description: "Ecommerce platform for selling products",
-    fullImage: "/projects/shoppio-full.png",
-    logo: "/projects/shoppio-logo.png",
-    demo: "https://kumang-subba.github.io/shoppio/",
-    repo: "https://github.com/kumang-subba/shoppio",
+    shortTitle: "Post:Blog App",
+    title: "Post: Blogging App",
+    id: "PostBlogApp",
+    description: "Full stack Blogging App",
+    fullImage: "/projects/post-blog-4.png",
+    logo: "/projects/post-blog-logo.png",
+
+    demo: "https://kumang-subba.github.io/post-webapp/",
+    repo: "https://github.com/kumang-subba/post-webapp",
   },
   {
     shortTitle: "NextCord",
@@ -62,16 +63,16 @@ export const projectData = [
     demo: "https://kumang-subba.github.io/the-hub/",
     repo: "https://github.com/kumang-subba/the-hub",
   },
-  {
-    shortTitle: "Blog App",
-    title: "Blog: Blog App",
-    id: "Blog",
-    description: "Full stack blog App",
-    fullImage: "/projects/blog-full.png",
-    logo: "/projects/blog-logo.png",
 
-    demo: "https://kumang-subba.github.io/blog-client/",
-    repo: "https://github.com/kumang-subba/blog-client",
+  {
+    shortTitle: "Shoppio",
+    title: "Shoppio: Ecommerce platform",
+    id: "Shoppio",
+    description: "Ecommerce platform for selling products",
+    fullImage: "/projects/shoppio-full.png",
+    logo: "/projects/shoppio-logo.png",
+    demo: "https://kumang-subba.github.io/shoppio/",
+    repo: "https://github.com/kumang-subba/shoppio",
   },
 ];
 export type ProjectType = (typeof projectData)[number];
