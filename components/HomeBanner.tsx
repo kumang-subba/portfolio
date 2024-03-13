@@ -153,6 +153,7 @@ const HomeBanner = () => {
             </Link>
             <a
               href="/resume"
+              target="_blank"
               className="flex group cursor-pointer gap-1 text-xs md:text-md lg:text-lg font-medium group relative"
             >
               Resume
