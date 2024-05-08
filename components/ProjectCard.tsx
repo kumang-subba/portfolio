@@ -7,17 +7,24 @@ import Image from "next/image";
 type ProjectCardProps = {
   children: React.ReactNode;
   id: string;
+  display: boolean;
 };
 type CardProps = {
   id: string;
   isFullScreen: boolean;
+  display: boolean;
 };
 const MotionImage = motion(Image);
 
-const Card = ({ id, children }: ProjectCardProps) => {
+const Card = ({ id, children, display }: ProjectCardProps) => {
   const { fullScreenProject, setFullScreenProject } = useProjectViewStore();
   return (
-    <div className={cn("absolute inset-0 rounded-2xl overflow-hidden")}>
+    <div
+      className={cn(
+        "absolute inset-0 rounded-2xl overflow-hidden",
+        display ? "block" : "hidden"
+      )}
+    >
       {children}
       <button
         className={cn(
@@ -43,8 +50,8 @@ type Projects = {
   PostBlogApp: (props: CardProps) => JSX.Element;
 };
 export const ProjectCard: Projects = {
-  Shoppio: ({ id, isFullScreen }: CardProps) => (
-    <Card id={id}>
+  Shoppio: ({ id, isFullScreen, display }: CardProps) => (
+    <Card id={id} display={display}>
       <div
         className={cn(
           "origin-bottom-left absolute inset-0 bg-gradient-to-br rounded-2xl active-card from-[#f7f0ff] to-[#a78afe]"
@@ -81,7 +88,7 @@ export const ProjectCard: Projects = {
         height={200}
       />
 
-      {!isFullScreen && (
+      {!isFullScreen && display && (
         <MotionImage
           layoutId="logo"
           src="/projects/shoppio-logo.png"
@@ -95,8 +102,8 @@ export const ProjectCard: Projects = {
       )}
     </Card>
   ),
-  Nextcord: ({ id, isFullScreen }: CardProps) => (
-    <Card id={id}>
+  Nextcord: ({ id, isFullScreen, display }: CardProps) => (
+    <Card id={id} display={display}>
       <div
         className={cn(
           "origin-bottom-left absolute inset-0 bg-gradient-to-br rounded-2xl active-card from-[#f7f0ff] to-[#addeff]"
@@ -133,7 +140,7 @@ export const ProjectCard: Projects = {
         height={200}
       />
 
-      {!isFullScreen && (
+      {!isFullScreen && display && (
         <MotionImage
           layoutId="logo"
           src="/projects/nextcord-logo.png"
@@ -145,8 +152,8 @@ export const ProjectCard: Projects = {
       )}
     </Card>
   ),
-  Thehub: ({ id, isFullScreen }: CardProps) => (
-    <Card id={id}>
+  Thehub: ({ id, isFullScreen, display }: CardProps) => (
+    <Card id={id} display={display}>
       <div
         className={cn(
           "origin-bottom-left absolute inset-0 bg-gradient-to-br rounded-2xl active-card from-[#f7f0ff] to-[#ffd8ad]"
@@ -183,7 +190,7 @@ export const ProjectCard: Projects = {
         height={200}
       />
 
-      {!isFullScreen && (
+      {!isFullScreen && display && (
         <MotionImage
           layoutId="logo"
           src="/projects/the-hub-logo.png"
@@ -197,8 +204,8 @@ export const ProjectCard: Projects = {
       )}
     </Card>
   ),
-  PostBlogApp: ({ id, isFullScreen }: CardProps) => (
-    <Card id={id}>
+  PostBlogApp: ({ id, isFullScreen, display }: CardProps) => (
+    <Card id={id} display={display}>
       <div
         className={cn(
           "origin-bottom-left absolute inset-0 bg-gradient-to-br rounded-2xl active-card from-[#f7f0ff] to-[#ffade1]"
@@ -234,7 +241,7 @@ export const ProjectCard: Projects = {
         width={200}
         height={200}
       />
-      {!isFullScreen && (
+      {!isFullScreen && display && (
         <MotionImage
           layoutId="logo"
           src="/projects/post-blog-logo.png"
