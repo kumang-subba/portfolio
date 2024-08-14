@@ -14,6 +14,7 @@ export const skillsData = [
   "MySQL",
   "Framer Motion",
   "Bootstrap",
+  "React-native",
 ] as const;
 export type SKillsType = (typeof skillsData)[number];
 export const experienceData = [
@@ -24,10 +25,10 @@ export const experienceData = [
     timeline: "Nov 2018 - Dec 2022",
   },
   {
-    title: "Frontend Developer Training",
-    company: "Kreativstorm",
-    location: "Berlin, Germany, Remote",
-    timeline: "Jan 2024 - Feb 2024",
+    title: "Freelance Fullstack developer",
+    company: "",
+    location: "Finland",
+    timeline: "Current",
   },
 ];
 export const projectData = [

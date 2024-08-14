@@ -93,7 +93,7 @@ const HomeBanner = () => {
   return (
     <div
       className={cn(
-        "w-full flex flex-col items-center justify-center h-screen"
+        "w-full flex flex-col items-center justify-center h-screen",
       )}
     >
       <AnimatePresence>
@@ -115,19 +115,17 @@ const HomeBanner = () => {
             </motion.span>
           ))}
           <ImageSpan text="Kumang Subba." imgSrc="/kumang.png" />{" "}
-          {"I am a student of Business Information Technology, at Laurea University of Applied Sciences,"
-            .split(" ")
-            .map((word, index) => (
-              <motion.span
-                key={word + "-" + index + "-b"}
-                className="inline-block"
-                variants={singleWord}
-              >
-                {word}&nbsp;
-              </motion.span>
-            ))}
-          <ImageSpan text="Finland." imgSrc="/finland.png" />{" "}
-          {"I'm a".split(" ").map((word, index) => (
+          {"I am a freelance ".split(" ").map((word, index) => (
+            <motion.span
+              key={word + "-" + index + "-b"}
+              className="inline-block"
+              variants={singleWord}
+            >
+              {word}&nbsp;
+            </motion.span>
+          ))}
+          <ImageSpan text="Full-stack developer." imgSrc="/developer.png" />
+          {"Currently based in ".split(" ").map((word, index) => (
             <motion.span
               key={word + "-" + index + "-a"}
               className="inline-block"
@@ -136,7 +134,22 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Web Developer" imgSrc="/developer.png" />
+          <ImageSpan text="Finland, " imgSrc="/finland.png" />{" "}
+          {"and pursuing a degree in Business Information Technology from "
+            .split(" ")
+            .map((word, index) => (
+              <motion.span
+                key={word + "-" + index + "-a"}
+                className="inline-block"
+                variants={singleWord}
+              >
+                {word}&nbsp;
+              </motion.span>
+            ))}
+          <ImageSpan
+            text="Laurea University of Applied Sciences."
+            imgSrc="/laurea.png"
+          />{" "}
           <motion.div
             className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center"
             variants={singleWord}
