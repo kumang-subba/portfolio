@@ -115,7 +115,7 @@ const HomeBanner = () => {
             </motion.span>
           ))}
           <ImageSpan text="Kumang Subba." imgSrc="/kumang.png" />{" "}
-          {"I am a freelance ".split(" ").map((word, index) => (
+          {"I am a ".split(" ").map((word, index) => (
             <motion.span
               key={word + "-" + index + "-b"}
               className="inline-block"
