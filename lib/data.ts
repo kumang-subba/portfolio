@@ -25,10 +25,10 @@ export const experienceData = [
     timeline: "Nov 2018 - Dec 2022",
   },
   {
-    title: "Freelance Fullstack developer",
-    company: "",
+    title: "Mobile App Developer Intern",
+    company: "Kesko Oyj",
     location: "Finland",
-    timeline: "Current",
+    timeline: "June 2024 - Dec 2024",
   },
 ];
 export const projectData = [
