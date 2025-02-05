@@ -20,7 +20,7 @@ const Projects = () => {
 
   const { fullScreenProject, inProjectView } = useProjectViewStore();
   const currentProject: currentProject = projectData.find(
-    (project) => project.id === inProjectView
+    (project) => project.id === inProjectView,
   );
   useEffect(() => {
     if (fullScreenProject) {

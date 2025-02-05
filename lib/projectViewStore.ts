@@ -11,5 +11,6 @@ export const useProjectViewStore = create<ViewStore>((set) => ({
   inProjectView: null,
   setInProjectView: (project: string | null) => set({ inProjectView: project }),
   fullScreenProject: null,
-  setFullScreenProject: (project: string | null) => set({ fullScreenProject: project }),
+  setFullScreenProject: (project: string | null) =>
+    set({ fullScreenProject: project }),
 }));

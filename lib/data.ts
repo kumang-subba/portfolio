@@ -39,9 +39,18 @@ export const projectData = [
     description: "Full stack Blogging App",
     fullImage: "/projects/post-blog-4.png",
     logo: "/projects/post-blog-logo.png",
-
     demo: "https://kumang-subba.github.io/post-webapp/",
     repo: "https://github.com/kumang-subba/post-webapp",
+  },
+  {
+    shortTitle: "Tune",
+    title: "Tune: Music App",
+    id: "Tune",
+    description: "SPA made using without any frameworks / libraries",
+    fullImage: "/projects/tune-full.png",
+    logo: "/projects/tune-logo.svg",
+    demo: "https://main--kumang-tune.netlify.app",
+    repo: "https://github.com/kumang-subba/Tune",
   },
   {
     shortTitle: "NextCord",
@@ -64,7 +73,6 @@ export const projectData = [
     demo: "https://kumang-subba.github.io/the-hub/",
     repo: "https://github.com/kumang-subba/the-hub",
   },
-
   {
     shortTitle: "Shoppio",
     title: "Shoppio: Ecommerce platform",
