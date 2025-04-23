@@ -19,12 +19,6 @@ export const skillsData = [
 export type SKillsType = (typeof skillsData)[number];
 export const experienceData = [
   {
-    title: "Accountant",
-    company: "Kang Hydropower Company",
-    location: "Nepal",
-    timeline: "Nov 2018 - Dec 2022",
-  },
-  {
     title: "Mobile App Developer Intern",
     company: "Kesko Oyj",
     location: "Finland",
