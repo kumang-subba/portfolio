@@ -13,7 +13,7 @@ import Image from "next/image";
 const Contact = () => {
   const [isCompany, setIsCompany] = useState<boolean>(false);
   const [submitSuccess, setSubmitSuccess] = useState<undefined | boolean>(
-    undefined
+    undefined,
   );
   const { handleSubmit, register, formState } = useForm({
     resolver: zodResolver(EmailValidator),
@@ -49,7 +49,7 @@ const Contact = () => {
           className={cn(
             "flex flex-col p-4 bg-violet-600 lg:rounded-l-lg lg:rounded-r-none rounded-lg lg:w-72 w-[100%] min-h-full",
 
-            isCompany ? "bg-indigo-600" : "bg-violet-600"
+            isCompany ? "bg-indigo-600" : "bg-violet-600",
           )}
         >
           <h1 className="text-xl md:text-2xl font-bold basis-auto">
@@ -68,7 +68,7 @@ const Contact = () => {
                 type="text"
                 className={cn(
                   "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
-                  isCompany ? "bg-indigo-800" : "bg-violet-800"
+                  isCompany ? "bg-indigo-800" : "bg-violet-800",
                 )}
                 placeholder="Your name"
                 required
@@ -79,7 +79,7 @@ const Contact = () => {
                 type="email"
                 className={cn(
                   "px-2 h-8 md:h-10 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
-                  isCompany ? "bg-indigo-800" : "bg-violet-800"
+                  isCompany ? "bg-indigo-800" : "bg-violet-800",
                 )}
                 placeholder="Your email address"
                 required
@@ -97,7 +97,7 @@ const Contact = () => {
                 type="text"
                 className={cn(
                   "h-0 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none hidden disabled:text-gray-300 text-sm md:text-base",
-                  isCompany ? "bg-indigo-800" : "bg-violet-800"
+                  isCompany ? "bg-indigo-800" : "bg-violet-800",
                 )}
                 placeholder="Company name"
                 animate={{
@@ -113,7 +113,7 @@ const Contact = () => {
               <textarea
                 className={cn(
                   "h-52 py-1 md:py-3 px-2 md:px-4 rounded-lg bg-opacity-80 focus:bg-opacity-100 transition-all outline-none disabled:text-gray-300 text-sm md:text-base",
-                  isCompany ? "bg-indigo-800" : "bg-violet-800"
+                  isCompany ? "bg-indigo-800" : "bg-violet-800",
                 )}
                 placeholder="Your message"
                 required
@@ -125,7 +125,7 @@ const Contact = () => {
             <button
               className={cn(
                 "bg-white text-indigo-900 w-full transition-all relative overflow-hidden py-2 px-4 text-center mt-2 rounded-lg font-semibold flex items-center justify-center gap-2 hover:text-white disabled:hover:text-gray-300 disabled:text-indigo-700",
-                isCompany ? "hover:bg-indigo-800" : "hover:bg-violet-800"
+                isCompany ? "hover:bg-indigo-800" : "hover:bg-violet-800",
               )}
               disabled={isLoading}
             >
@@ -162,6 +162,7 @@ const Contact = () => {
               height={0}
               sizes="100vw"
               className="w-full h-auto object-cover"
+              loading="eager"
             />
             <Image
               src={"/work.jpg"}
@@ -170,6 +171,7 @@ const Contact = () => {
               height={0}
               sizes="100vw"
               className="w-full h-auto object-cover"
+              loading="eager"
             />
           </motion.div>
         </motion.div>

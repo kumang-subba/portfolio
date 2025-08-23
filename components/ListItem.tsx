@@ -9,7 +9,12 @@ const ListItem = ({ title, company, location, timeline }: ListItemProps) => {
   return (
     <>
       <li className="even:translate-x-[60%] odd:translate-x-[-60%]">
-        <TiltCard title={title} company={company} location={location} timeline={timeline} />
+        <TiltCard
+          title={title}
+          company={company}
+          location={location}
+          timeline={timeline}
+        />
       </li>
     </>
   );
@@ -36,8 +41,16 @@ const TiltCard = ({
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["17.5deg", "-17.5deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-17.5deg", "17.5deg"]);
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["17.5deg", "-17.5deg"],
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-17.5deg", "17.5deg"],
+  );
 
   const handleMouseMove = (e: any) => {
     const rect = e.target.getBoundingClientRect();
@@ -69,14 +82,14 @@ const TiltCard = ({
         rotateX,
         transformStyle: "preserve-3d",
       }}
-      className="relative h-52 w-[8.5rem] md:h-44 md:w-72 lg:h-56 lg:w-96 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-52 w-[8.5rem] md:h-44 md:w-76 lg:h-56 lg:w-[30rem] rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg text-violet-900 pointer-events-none"
+        className="absolute px-2 inset-4 grid place-content-center rounded-xl bg-white shadow-lg text-violet-900 pointer-events-none"
       >
         <h1
           style={{

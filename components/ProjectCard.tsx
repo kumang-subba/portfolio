@@ -23,6 +23,7 @@ import tuneImage1 from "../public/projects/tune-1.png";
 import tuneImage2 from "../public/projects/tune-2.png";
 import tuneImage3 from "../public/projects/tune-3.png";
 import tuneLogo from "../public/projects/tune-logo.svg";
+import { useRef } from "react";
 
 type ProjectCardProps = {
   children: React.ReactNode;
@@ -87,6 +88,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={shoppioImage2}
@@ -97,6 +99,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={shoppioImage3}
@@ -107,6 +110,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
 
       {!isFullScreen && display && (
@@ -119,6 +123,7 @@ export const ProjectCard: Projects = {
           )}
           width={50}
           height={50}
+          loading="eager"
         />
       )}
     </Card>
@@ -135,6 +140,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={nextcordImage2}
@@ -145,6 +151,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={nextcordImage3}
@@ -155,6 +162,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
 
       {!isFullScreen && display && (
@@ -165,6 +173,7 @@ export const ProjectCard: Projects = {
           className={cn("absolute rounded-xl top-40 left-[50%] h-10 w-10")}
           width={50}
           height={50}
+          loading="eager"
         />
       )}
     </Card>
@@ -185,6 +194,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={theHubImage2}
@@ -195,6 +205,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={theHubImage3}
@@ -205,6 +216,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
 
       {!isFullScreen && display && (
@@ -217,6 +229,7 @@ export const ProjectCard: Projects = {
           )}
           width={50}
           height={50}
+          loading="eager"
         />
       )}
     </Card>
@@ -237,6 +250,7 @@ export const ProjectCard: Projects = {
         )}
         width={250}
         height={250}
+        loading="eager"
       />
       <Image
         src={postBlogImage2}
@@ -247,6 +261,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={postBlogImage3}
@@ -257,6 +272,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       {!isFullScreen && display && (
         <MotionImage
@@ -266,6 +282,7 @@ export const ProjectCard: Projects = {
           className={cn("absolute rounded-xl top-0 left-0 w-8")}
           width={50}
           height={50}
+          loading="eager"
         />
       )}
     </Card>
@@ -286,6 +303,7 @@ export const ProjectCard: Projects = {
         )}
         width={250}
         height={250}
+        loading="eager"
       />
       <Image
         src={tuneImage2}
@@ -296,6 +314,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       <Image
         src={tuneImage3}
@@ -306,6 +325,7 @@ export const ProjectCard: Projects = {
         )}
         width={200}
         height={200}
+        loading="eager"
       />
       {!isFullScreen && display && (
         <MotionImage
@@ -315,6 +335,7 @@ export const ProjectCard: Projects = {
           className={cn("absolute rounded-xl top-[50%] left-[50%] w-8")}
           width={50}
           height={50}
+          loading="eager"
         />
       )}
     </Card>

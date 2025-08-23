@@ -15,14 +15,22 @@ export const skillsData = [
   "Framer Motion",
   "Bootstrap",
   "React-native",
+  "C",
+  "C++",
 ] as const;
 export type SKillsType = (typeof skillsData)[number];
 export const experienceData = [
   {
+    title: "Software Engineer",
+    company: "Vesko",
+    location: "Finland",
+    timeline: "Jan 2024 - Present",
+  },
+  {
     title: "Mobile App Developer Intern",
     company: "Kesko Oyj",
     location: "Finland",
-    timeline: "June 2024 - Dec 2024",
+    timeline: "June 2023 - Dec 2023",
   },
 ];
 export const projectData = [

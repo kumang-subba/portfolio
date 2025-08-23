@@ -124,8 +124,8 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Full-stack developer." imgSrc="/developer.png" />
-          {"Currently based in ".split(" ").map((word, index) => (
+          <ImageSpan text="Software Engineer." imgSrc="/developer.png" />
+          {" Currently based in ".split(" ").map((word, index) => (
             <motion.span
               key={word + "-" + index + "-a"}
               className="inline-block"
@@ -134,8 +134,8 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Finland, " imgSrc="/finland.png" />{" "}
-          {"and pursuing a degree in Business Information Technology from "
+          <ImageSpan text="Finland. " imgSrc="/finland.png" />{" "}
+          {"I code and learn out of curiosity, it's my passion, not an obligation"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -146,10 +146,6 @@ const HomeBanner = () => {
                 {word}&nbsp;
               </motion.span>
             ))}
-          <ImageSpan
-            text="Laurea University of Applied Sciences."
-            imgSrc="/laurea.png"
-          />{" "}
           <motion.div
             className="flex py-8 gap-1 md:gap-2 lg:gap-4 items-center"
             variants={singleWord}

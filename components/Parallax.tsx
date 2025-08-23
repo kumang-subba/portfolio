@@ -23,7 +23,7 @@ const Parallax = () => {
 
   return (
     <div
-      className="w-full h-screen overflow-hidden relative grid place-items-center"
+      className="w-full h-screen bg-black overflow-hidden relative grid place-items-center"
       ref={ref}
     >
       <div className="z-10 pb-20 pr-10 w-1/2">
@@ -41,7 +41,7 @@ const Parallax = () => {
         </motion.h1>
       </div>
       <MotionImage
-        className="absolute bottom-0 z-0"
+        className="absolute w-full h-full bottom-0 z-0"
         src={parallaxBg1}
         alt="parallax background one"
         style={{
@@ -49,7 +49,7 @@ const Parallax = () => {
         }}
       />
       <Image
-        className="absolute bottom-0 z-20"
+        className="absolute w-full h-full bottom-0 z-20"
         src={parallaxBg2}
         alt="parallax background 2"
       />

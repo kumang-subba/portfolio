@@ -12,7 +12,7 @@ const NavBar = () => {
   const [scrollPosition, setPosition] = useState(0);
   useLayoutEffect(() => {
     function updatePosition() {
-      setPosition(window.pageYOffset);
+      setPosition(window.scrollY);
     }
     window.addEventListener("scroll", updatePosition);
     updatePosition();
@@ -36,7 +36,7 @@ const NavBar = () => {
         "flex w-full px-8 sm:px-16 md:px-32 h-20 justify-between items-center fixed z-50 transition-all ease-out",
         scrollPosition > 0
           ? "backdrop-blur-lg bg-indigo-800/20"
-          : "backdrop-blur-0 bg-indigo-50/0"
+          : "backdrop-blur-0 bg-transparent",
       )}
       animate={{ y: hidden ? "-100%" : 0 }}
       initial={{ y: 0 }}
@@ -73,7 +73,7 @@ const CustomLink = ({
       {...props}
       className={cn(
         "group relative text-[10px] xl:text-xl md:text-sm text-nowrap",
-        path === props.href && "font-semibold"
+        path === props.href && "font-semibold",
       )}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -83,7 +83,7 @@ const CustomLink = ({
       <span
         className={cn(
           "h-[1px] inline-block bg-white absolute left-0 bottom-0.5 group-hover:w-full transition-[width] ease duration-300",
-          path === props.href ? "w-full" : "w-1/2"
+          path === props.href ? "w-full" : "w-1/2",
         )}
       >
         &nbsp;

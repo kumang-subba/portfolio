@@ -87,8 +87,6 @@ const Projects = () => {
       ]);
     }
   }, [fullScreenProject, animate]);
-  const CurrentCard =
-    ProjectCard[currentProject?.id as keyof typeof ProjectCard];
   return (
     <div className="max-w-6xl px-4 mx-auto">
       <h1 className="text-center font-bold uppercase text-2xl md:text-4xl lg:text-6xl leading-loose pt-8">
@@ -118,12 +116,11 @@ const Projects = () => {
           </div>
           <div className="sticky top-0 left-0 flex h-screen w-full items-center justify-center">
             <div className="w-full aspect-square bg-inherit rounded-2xl relative">
-              {/* {currentProject && <CurrentCard id={currentProject?.id as string} isFullScreen={!!fullScreenProject} />} */}
               {projectData.map((proj) => {
                 // @ts-ignore
-                let CardTest = ProjectCard[proj.id];
+                let ProjectCardComponent = ProjectCard[proj.id];
                 return (
-                  <CardTest
+                  <ProjectCardComponent
                     id={proj.id}
                     isFullScreen={!!fullScreenProject}
                     key={proj.id}
