@@ -27,10 +27,10 @@ export const experienceData = [
     timeline: "Jan 2025 - Present",
   },
   {
-    title: "Mobile Application Developer",
+    title: "Application Developer Intern",
     company: "Kesko Oyj",
     location: "Finland",
-    timeline: "June 2023 - Dec 2024",
+    timeline: "June 2024 - Dec 2024",
   },
 ];
 export const projectData = [
