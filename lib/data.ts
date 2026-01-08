@@ -32,6 +32,12 @@ export const experienceData = [
     location: "Finland",
     timeline: "June 2023 - Dec 2023",
   },
+  {
+    title: "IT Support",
+    company: "Kang Hydropower Company Pvt. Ltd",
+    location: "Nepal",
+    timeline: "Aug 2020 - Nov 2022",
+  },
 ];
 export const projectData = [
   {
