@@ -156,7 +156,7 @@ const Contact = () => {
             }}
           >
             <Image
-              src={"/personal.jpg"}
+              src={"/personal_progressive.jpeg"}
               alt={"personal"}
               width={0}
               height={0}
@@ -165,7 +165,7 @@ const Contact = () => {
               loading="eager"
             />
             <Image
-              src={"/work.jpg"}
+              src={"/work_progressive.jpeg"}
               alt={"work"}
               width={0}
               height={0}

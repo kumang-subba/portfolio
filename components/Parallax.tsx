@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import parallaxBg1 from "../public/parallax.jpg";
+import parallaxBg1 from "../public/parallax_progressive.jpeg";
 import parallaxBg2 from "../public/parallaxBot.png";
 
 const MotionImage = motion(Image);
@@ -47,11 +47,18 @@ const Parallax = () => {
         style={{
           y: backgroundY,
         }}
+        width={1000}
+        height={1000}
+        priority
+        fetchPriority="high"
+        sizes="100vw"
       />
       <Image
         className="absolute w-full h-full bottom-0 z-20"
         src={parallaxBg2}
         alt="parallax background 2"
+        width={1000}
+        height={1000}
       />
     </div>
   );

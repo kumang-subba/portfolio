@@ -3,9 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import NavBar from "@/components/NavBar";
-import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Transition from "@/components/Transition";
 import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
@@ -36,12 +34,7 @@ export default function RootLayout({
           )}
         >
           <NavBar />
-          <AnimatePresence mode="wait">
-            <motion.div key={path}>
-              <Transition />
-              {children}
-            </motion.div>
-          </AnimatePresence>
+          {children}
           <Footer />
         </body>
       </html>

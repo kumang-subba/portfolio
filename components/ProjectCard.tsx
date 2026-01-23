@@ -23,7 +23,6 @@ import tuneImage1 from "../public/projects/tune-1.png";
 import tuneImage2 from "../public/projects/tune-2.png";
 import tuneImage3 from "../public/projects/tune-3.png";
 import tuneLogo from "../public/projects/tune-logo.svg";
-import { useRef } from "react";
 
 type ProjectCardProps = {
   children: React.ReactNode;
