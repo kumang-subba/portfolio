@@ -24,13 +24,13 @@ export const experienceData = [
     title: "Software Engineer",
     company: "Vesko",
     location: "Finland",
-    timeline: "Jan 2024 - Present",
+    timeline: "Jan 2025 - Present",
   },
   {
     title: "Application Developer Intern",
     company: "Kesko Oyj",
     location: "Finland",
-    timeline: "June 2023 - Dec 2023",
+    timeline: "June 2024 - Dec 2024",
   },
   {
     title: "IT Support",
