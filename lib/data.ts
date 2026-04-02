@@ -93,3 +93,16 @@ export const projectData = [
   },
 ];
 export type ProjectType = (typeof projectData)[number];
+
+export const ArticlesData = [
+  {
+    title: "Buffering Syscalls",
+    url: "https://smoggy-whale-2d9.notion.site/Buffering-Syscalls-33566bcbacb480c19004f1c9d2fc0116?source=copy_link",
+    desc: "An exploration of reading and writing files in C using stdio versus direct syscalls, demonstrating how buffer size impacts performance, and why high-performance tools like GNU cat use page size, posix_fadvise, and aligned memory.",
+  },
+  {
+    title: "OFFSET vs Keyset Pagination in PostgreSQL",
+    url: "https://smoggy-whale-2d9.notion.site/OFFSET-vs-Keyset-Pagination-in-PostgreSQL-EXPLAIN-ANALYZE-2eb66bcbacb4807487ccc5fa51e6b5ad?source=copy_link",
+    desc: "A deep dive into pagination strategies in PostgreSQL, comparing OFFSET-based pagination with Keyset pagination, discussing performance implications, and best practices for building efficient APIs and user interfaces.",
+  },
+];

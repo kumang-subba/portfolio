@@ -135,7 +135,7 @@ const HomeBanner = () => {
             </motion.span>
           ))}
           <ImageSpan text="Finland. " imgSrc="/finland.png" />{" "}
-          {"I code and learn out of curiosity, it's my passion, not an obligation"
+          {"I code and learn out of curiosity and passion"
             .split(" ")
             .map((word, index) => (
               <motion.span
