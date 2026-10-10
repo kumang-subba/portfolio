@@ -124,7 +124,7 @@ const HomeBanner = () => {
               {word}&nbsp;
             </motion.span>
           ))}
-          <ImageSpan text="Software Engineer." imgSrc="/developer.png" />
+          <ImageSpan text="Software Developer." imgSrc="/developer.png" />
           {" Currently based in ".split(" ").map((word, index) => (
             <motion.span
               key={word + "-" + index + "-a"}

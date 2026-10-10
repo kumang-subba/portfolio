@@ -21,7 +21,7 @@ export const skillsData = [
 export type SKillsType = (typeof skillsData)[number];
 export const experienceData = [
   {
-    title: "Software Engineer",
+    title: "Software Developer",
     company: "Vesko",
     location: "Finland",
     timeline: "Jan 2025 - Present",
